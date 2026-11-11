@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account &amp; Settings | Smart Food Mess</title>
+    <link rel="stylesheet" href="css/style.css?v=20261101.1">
+</head>
+<body class="app-body settings-page" data-page="account-settings">
+<header class="app-header"><div class="app-header-inner">
+    <a class="app-logo" href="student-dashboard.html" data-dashboard-link><span class="app-logo-icon" aria-hidden="true">SM</span><span class="app-logo-text">Smart Food Mess</span></a>
+    <nav class="app-nav">
+        <a class="app-nav-link" href="admin-dashboard.html" data-admin-only hidden>Dashboard</a>
+        <a class="app-nav-link" href="admin-menu.html" data-admin-only hidden>Manage Menu</a>
+        <a class="app-nav-link" href="admin-students.html" data-admin-only hidden>Students</a>
+        <a class="app-nav-link" href="admin-records.html" data-admin-only hidden>Meal Records</a>
+        <a class="app-nav-link" href="student-dashboard.html" data-student-only hidden>Dashboard</a>
+    </nav>
+    <div class="app-user"><details class="account-menu"><summary class="account-menu-trigger"><span class="role-badge" data-role-label></span><span class="user-chip" data-user-name></span><span class="avatar" data-user-initial></span><span class="account-menu-caret" aria-hidden="true"></span></summary><div class="account-menu-panel"><a href="account-settings.html" aria-current="page" data-account-menu-label>Account &amp; Settings</a><a href="logout">Logout</a></div></details></div>
+</div></header>
+<main class="app-main">
+    <div class="page-head"><div><p class="eyebrow" data-settings-eyebrow>ACCOUNT</p><h1 class="page-title" data-settings-title>Account &amp; Settings</h1><p class="page-sub">Manage your account details and find help and app information.</p></div></div>
+    <div class="flash-message" data-flash role="status" hidden></div>
+    <div class="error-message" data-page-error role="alert" hidden></div>
+
+    <div class="settings-options" role="group" aria-label="Settings options">
+        <button class="settings-option" type="button" data-settings-option="account" aria-expanded="false" aria-controls="account">
+            <svg class="settings-option-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c.5-3.5 3.2-5.5 7-5.5s6.5 2 7 5.5"></path></svg>
+            <span class="settings-option-copy"><strong>Account details</strong><span>Update your display name and view account information.</span></span>
+        </button>
+        <button class="settings-option" type="button" data-settings-option="admin-tools" data-admin-only hidden aria-expanded="false" aria-controls="admin-tools">
+            <svg class="settings-option-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 14 5l2.6-.2.9 2.4 2.2 1.4-.7 2.5.7 2.5-2.2 1.4-.9 2.4L14 17.2 12 19l-2-1.8-2.6.2-.9-2.4-2.2-1.4.7-2.5-.7-2.5 2.2-1.4.9-2.4L10 5z"></path><circle cx="12" cy="11.3" r="2.6"></circle></svg>
+            <span class="settings-option-copy"><strong>Admin tools</strong><span>Open menu, student and meal-record management.</span></span>
+        </button>
+        <button class="settings-option" type="button" data-settings-option="student-tools" data-student-only hidden aria-expanded="false" aria-controls="student-tools">
+            <svg class="settings-option-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16v11H4zM3 5h18v3H3z"></path><path d="M9 12h6"></path></svg>
+            <span class="settings-option-copy"><strong>Student portal</strong><span>Open your meals, weekly menu and history.</span></span>
+        </button>
+        <button class="settings-option" type="button" data-settings-option="about" aria-expanded="false" aria-controls="about">
+            <svg class="settings-option-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 10.8v5M12 7.7h.01"></path></svg>
+            <span class="settings-option-copy"><strong>About &amp; version</strong><span>View application and platform details.</span></span>
+        </button>
+        <button class="settings-option" type="button" data-settings-option="help" aria-expanded="false" aria-controls="help">
+            <svg class="settings-option-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 18.5 4 21l4.2-1.3a8 8 0 1 0-3.2-2.1z"></path><path d="M9.5 9a2.6 2.6 0 1 1 4.4 1.9c-1.2 1-1.9 1.4-1.9 2.8M12 16.8h.01"></path></svg>
+            <span class="settings-option-copy"><strong>Help center</strong><span>Find answers to common questions.</span></span>
+        </button>
+        <button class="settings-option" type="button" data-settings-option="terms" aria-expanded="false" aria-controls="terms">
+            <svg class="settings-option-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h7l4 4V20H7z"></path><path d="M14 3.5V8h4M10 12h5M10 15.5h5"></path></svg>
+            <span class="settings-option-copy"><strong>Terms &amp; conditions</strong><span>Read the portal's terms of use.</span></span>
+        </button>
+        <button class="settings-option" type="button" data-settings-option="privacy" aria-expanded="false" aria-controls="privacy">
+            <svg class="settings-option-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.2c0 4.3-2.8 7.7-7 9.8-4.2-2.1-7-5.5-7-9.8V6z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            <span class="settings-option-copy"><strong>Privacy policy</strong><span>Learn what information this app uses.</span></span>
+        </button>
+    </div>
+
+    <section class="section settings-section" id="account" data-settings-panel hidden>
+        <div class="section-heading"><div><h3>Account details</h3><p class="page-sub">Your profile is used throughout the mess portal.</p></div></div>
+        <form method="post" action="api/account" class="settings-form">
+            <div class="form-group">
+                <label for="accountName">Display name</label>
+                <input id="accountName" name="name" type="text" maxlength="100" autocomplete="name" required>
+            </div>
+            <div class="settings-readonly">
+                <div><span class="settings-label">Email address</span><strong data-account-email>Loading…</strong></div>
+                <div><span class="settings-label">Account type</span><strong data-account-role>Loading…</strong></div>
+                <div><span class="settings-label">Member since</span><strong data-account-created>Loading…</strong></div>
+            </div>
+            <button class="btn btn-green" type="submit">Save account details</button>
+        </form>
+        <p class="settings-note">Email and account type are managed by the system administrator.</p>
+    </section>
+
+    <section class="section settings-section" id="admin-tools" data-admin-only data-settings-panel hidden>
+        <h3>Admin tools</h3>
+        <p class="page-sub">Shortcuts to the management areas available to administrators.</p>
+        <div class="settings-links">
+            <a href="admin-menu.html"><strong>Manage menu</strong><span>Update weekly meals and prices.</span></a>
+            <a href="admin-students.html"><strong>Manage students</strong><span>Review registered student accounts.</span></a>
+            <a href="admin-records.html"><strong>Meal records</strong><span>Review meal choices and consumption.</span></a>
+        </div>
+    </section>
+
+    <section class="section settings-section" id="student-tools" data-student-only data-settings-panel hidden>
+        <h3>Student portal</h3>
+        <p class="page-sub">Your dashboard has today's meals, the weekly menu and your meal history.</p>
+        <div class="settings-links">
+            <a href="student-dashboard.html"><strong>Open student dashboard</strong><span>View meals, menu and recorded expenses.</span></a>
+        </div>
+    </section>
+
+    <section class="section settings-section" id="about" data-settings-panel hidden>
+        <h3>About this application</h3>
+        <p>Smart Food Mess helps manage weekly menus, student meal choices and meal records.</p>
+        <dl class="version-details">
+            <div><dt>Application</dt><dd>Smart Food Mess Management System</dd></div>
+            <div><dt>Version</dt><dd>1.0.0</dd></div>
+            <div><dt>Web platform</dt><dd>Jakarta Servlet 5 · Jetty 11</dd></div>
+            <div><dt>Data store</dt><dd>MySQL</dd></div>
+        </dl>
+    </section>
+
+    <section class="section settings-section" id="help" data-settings-panel hidden>
+        <h3>Help center</h3>
+        <p class="page-sub">Quick guidance for common account and meal-management questions.</p>
+        <details class="help-item">
+            <summary>How do I update my account name?</summary>
+            <p>Change the display name in Account details above and choose <strong>Save account details</strong>. Your email and role cannot be edited here.</p>
+        </details>
+        <details class="help-item">
+            <summary>Where can I find my meals and meal history?</summary>
+            <p>Students can open the dashboard to see today's meals, the weekly menu, meal history and recorded expenses. Ask the mess administrator if a record needs correction.</p>
+        </details>
+        <details class="help-item" data-admin-only hidden>
+            <summary>How do I update the menu or review records?</summary>
+            <p>Use the Admin tools shortcuts above or the navigation links at the top of the page.</p>
+        </details>
+        <details class="help-item">
+            <summary>Where do I get more help?</summary>
+            <p>Contact your mess administrator for sign-in assistance, account access, meal-record corrections or questions about how your institution manages this portal.</p>
+        </details>
+    </section>
+
+    <section class="section settings-section" id="terms" data-settings-panel hidden>
+        <h3>Terms &amp; conditions</h3>
+        <p class="settings-note">This summary is an application notice, not legal advice. The institution operating the portal should review and replace it with its approved terms before production use.</p>
+        <ol class="policy-list">
+            <li><strong>Use of the portal.</strong> Use your own account and provide accurate information. Do not attempt to access another person's account or change records you are not authorized to manage.</li>
+            <li><strong>Meal information.</strong> Menus, meal choices and expense records are provided for mess administration. Confirm billing or disputed records with the institution responsible for the mess.</li>
+            <li><strong>Availability.</strong> The portal is provided by the institution operating it and may be changed or unavailable during maintenance.</li>
+            <li><strong>Account responsibility.</strong> Keep your sign-in details private and notify the administrator if you believe your account has been accessed improperly.</li>
+        </ol>
+    </section>
+
+    <section class="section settings-section" id="privacy" data-settings-panel hidden>
+        <h3>Privacy policy</h3>
+        <p class="settings-note">This is a starter notice. The institution operating the portal must confirm its retention, access and contact details before using it as a formal privacy policy.</p>
+        <ol class="policy-list">
+            <li><strong>Information used.</strong> The application stores account name, email address and role, along with meal choices, menu information and meal-record or expense details needed to operate the mess portal.</li>
+            <li><strong>Purpose and access.</strong> Information is used to provide account access and manage mess operations. Administrators may access student and meal records for those purposes.</li>
+            <li><strong>Storage and security.</strong> Account and operational data is stored in the MySQL database configured by the institution. The current application version stores passwords as plain text; it is not suitable for production use with real credentials until password hashing and related security controls are implemented. Do not reuse a sensitive password on this system.</li>
+            <li><strong>Questions or requests.</strong> Contact the institution or mess administrator to ask about access, correction or deletion of account and meal information.</li>
+        </ol>
+    </section>
+    <footer class="settings-footer">Smart Food Mess · Version 1.0.0</footer>
+</main>
+<script src="js/pages.js?v=20261101.1"></script>
+</body>
+</html>

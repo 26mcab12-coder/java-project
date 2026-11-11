@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Menu | Smart Food Mess Management</title>
+    <link rel="stylesheet" href="css/style.css?v=20261101.1">
+</head>
+<body class="app-body" data-page="admin-menu">
+<header class="app-header"><div class="app-header-inner">
+    <a class="app-logo" href="admin-dashboard.html"><span class="app-logo-icon" aria-hidden="true">SM</span><span class="app-logo-text">Smart Food Mess</span></a>
+    <nav class="app-nav">
+        <a class="app-nav-link" href="admin-dashboard.html">Dashboard</a>
+        <a class="app-nav-link active" href="admin-menu.html">Manage Menu</a>
+        <a class="app-nav-link" href="admin-students.html">Students</a>
+        <a class="app-nav-link" href="admin-records.html">Meal Records</a>
+    </nav>
+    <div class="app-user"><details class="account-menu"><summary class="account-menu-trigger"><span class="role-badge">ADMIN</span><span class="user-chip" data-user-name></span><span class="avatar" data-user-initial></span><span class="account-menu-caret" aria-hidden="true"></span></summary><div class="account-menu-panel"><a href="account-settings.html">Settings</a><a href="logout">Logout</a></div></details></div>
+</div></header>
+<main class="app-main">
+    <div class="page-head"><div><h1 class="page-title">Manage Weekly Menu</h1><p class="page-sub">Add, edit or remove breakfast, lunch and dinner entries for each day.</p></div></div>
+    <div class="flash-message" data-flash role="status" hidden></div>
+    <div class="error-message" data-page-error role="alert" hidden></div>
+
+    <section class="section" id="editSection" hidden>
+        <h3>Edit Menu Entry</h3>
+        <form method="post" action="admin/menu" class="add-form">
+            <input type="hidden" name="action" value="update">
+            <input type="hidden" name="menuId" id="editMenuId">
+            <select name="dayOfWeek" id="editDay" required></select>
+            <select name="mealType" id="editMeal" required></select>
+            <input type="text" name="items" id="editItems" class="items-input" required>
+            <input type="number" name="price" id="editPrice" min="0" step="0.01" placeholder="Price in ₹" required>
+            <button type="submit" class="btn btn-blue">Save Changes</button>
+            <a class="btn btn-ghost" href="admin-menu.html">Cancel</a>
+        </form>
+    </section>
+
+    <section class="section"><h3>Add New Menu Entry</h3>
+        <form method="post" action="admin/menu" class="add-form">
+            <input type="hidden" name="action" value="add">
+            <select name="dayOfWeek" id="addDay" required></select>
+            <select name="mealType" id="addMeal" required></select>
+            <input type="text" name="items" placeholder="Items, separated by commas" class="items-input" required>
+            <input type="number" name="price" min="0" step="0.01" placeholder="Price in ₹" required>
+            <button type="submit" class="btn btn-green">Add Entry</button>
+        </form>
+    </section>
+
+    <section class="section"><h3>Current Menu</h3>
+        <div class="table-wrap"><table class="table">
+            <thead><tr><th>Day</th><th>Meal</th><th>Items</th><th>Price</th><th>Actions</th></tr></thead>
+            <tbody id="menuTable"><tr><td colspan="5" class="empty-cell">Loading menu…</td></tr></tbody>
+        </table></div>
+    </section>
+</main>
+<script src="js/pages.js?v=20261101.1"></script>
+</body>
+</html>

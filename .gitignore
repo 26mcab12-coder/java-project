@@ -1,0 +1,10 @@
+# Java build output
+**/target/
+**/build/
+**/out/
+/tmpout/
+*.class
+
+# Local archives and database configuration
+*.zip
+**/db.properties

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Smart Food Mess Management</title>
+    <link rel="stylesheet" href="css/style.css?v=20261101.1">
+</head>
+<body class="app-body admin-dashboard" data-page="admin-dashboard">
+<header class="app-header"><div class="app-header-inner">
+    <a class="app-logo" href="admin-dashboard.html"><span class="app-logo-icon" aria-hidden="true">SM</span><span class="app-logo-text">Smart Food Mess</span></a>
+    <nav class="app-nav">
+        <a class="app-nav-link active" href="admin-dashboard.html">Dashboard</a>
+        <a class="app-nav-link" href="admin-menu.html">Manage Menu</a>
+        <a class="app-nav-link" href="admin-students.html">Students</a>
+        <a class="app-nav-link" href="admin-records.html">Meal Records</a>
+    </nav>
+    <div class="app-user"><details class="account-menu"><summary class="account-menu-trigger"><span class="role-badge">ADMIN</span><span class="user-chip" data-user-name></span><span class="avatar" data-user-initial></span><span class="account-menu-caret" aria-hidden="true"></span></summary><div class="account-menu-panel"><a href="account-settings.html">Settings</a><a href="logout">Logout</a></div></details></div>
+</div></header>
+<main class="app-main">
+    <div class="page-head"><div><p class="eyebrow">MESS OVERVIEW</p><h1 class="page-title"><span data-time-greeting>Welcome</span>, <span data-user-name></span></h1><p class="page-sub" data-daily-welcome>Daily operations and meal spending at a glance.</p></div><div class="today-pill"><span class="today-dot"></span><span data-today></span></div></div>
+    <div class="flash-message" data-flash role="status" hidden></div>
+    <div class="stat-grid">
+        <div class="stat-card stat-1"><h3 data-stat="totalStudents">0</h3><p>Registered Students</p></div>
+        <div class="stat-card stat-2"><h3 data-stat="totalMenus">0</h3><p>Menu Entries</p></div>
+        <div class="stat-card stat-3"><h3 data-stat="optedInCount">0</h3><p>Opted-in Today</p></div>
+        <div class="stat-card stat-4"><h3 data-stat="optedOutCount">0</h3><p>Opted-out Today</p></div>
+        <div class="stat-card stat-5"><h3 data-stat="consumedCount">0</h3><p>Consumed Today</p></div>
+        <div class="stat-card stat-spend"><h3 data-stat="todayExpenseTotal" data-stat-format="currency">₹0.00</h3><p>Meal Charges Today</p></div>
+    </div>
+    <section class="section admin-spending">
+        <div class="section-heading"><div><h3>Today's meal charges</h3><p class="page-sub">Charges from opted-in and consumed meals. Opted-out meals are excluded.</p></div><span class="section-date" data-today></span></div>
+        <div class="expense-summary">
+            <div class="expense-card"><span class="expense-label">BREAKFAST</span><strong data-meal-expense="BREAKFAST">₹0.00</strong></div>
+            <div class="expense-card"><span class="expense-label">LUNCH</span><strong data-meal-expense="LUNCH">₹0.00</strong></div>
+            <div class="expense-card"><span class="expense-label">DINNER</span><strong data-meal-expense="DINNER">₹0.00</strong></div>
+        </div>
+    </section>
+    <section class="section quick-links"><h3>Quick Actions</h3><p>
+        <a class="btn btn-orange" href="admin-menu.html">Manage Menu</a>
+        <a class="btn btn-blue" href="admin-students.html">Manage Students</a>
+        <a class="btn btn-green" href="admin-records.html">Meal Records</a>
+    </p></section>
+</main>
+<script src="js/pages.js?v=20261101.1"></script>
+</body>
+</html>

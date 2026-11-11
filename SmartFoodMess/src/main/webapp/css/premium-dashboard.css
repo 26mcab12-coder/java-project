@@ -1,0 +1,468 @@
+/* Premium override skin for dashboard experience */
+
+body.app-body {
+    background:
+        radial-gradient(circle at 85% 0%, rgba(26, 168, 123, 0.12), transparent 20%),
+        radial-gradient(circle at 0% 20%, rgba(63, 127, 196, 0.08), transparent 22%),
+        linear-gradient(180deg, #f3f7f5 0%, #edf4f1 100%);
+}
+
+.app-header {
+    background: linear-gradient(180deg, rgba(12, 18, 16, 0.97) 0%, rgba(19, 35, 31, 0.97) 100%);
+    box-shadow: 0 16px 36px rgba(10, 18, 15, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.app-header-inner {
+    min-height: 78px;
+    padding: 12px 22px;
+}
+
+.app-nav-link {
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    transition: all 0.16s ease;
+}
+
+.app-nav-link:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.app-nav-link.active {
+    background: linear-gradient(135deg, #19a97a 0%, #0e7a5d 100%);
+    box-shadow: 0 10px 18px rgba(17, 122, 93, 0.24);
+}
+
+.role-badge {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.page-head {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(244, 249, 247, 0.84));
+    border: 1px solid rgba(226, 234, 230, 0.96);
+    border-radius: 22px;
+    padding: 18px 20px 16px;
+    box-shadow: 0 12px 32px rgba(19, 33, 28, 0.04);
+}
+
+.page-head .eyebrow {
+    letter-spacing: 0.2em;
+    color: #427b6b;
+}
+
+.page-title {
+    font-size: 31px;
+    letter-spacing: -0.04em;
+    line-height: 1.08;
+}
+
+.today-pill {
+    background: linear-gradient(135deg, rgba(18, 122, 93, 0.1), rgba(34, 181, 115, 0.08));
+    border: 1px solid rgba(18, 122, 93, 0.12);
+    padding: 9px 14px;
+    border-radius: 999px;
+    color: #0d6958;
+    font-weight: 800;
+}
+
+.section {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(249, 252, 251, 0.92) 100%);
+    border: 1px solid rgba(226, 234, 230, 0.96);
+    border-radius: 20px;
+    box-shadow: 0 18px 38px rgba(17, 29, 25, 0.05);
+    padding: 22px 22px 20px;
+}
+
+.section h3 {
+    margin-bottom: 18px;
+    border-bottom: 1px solid rgba(226, 234, 230, 0.9);
+    padding-bottom: 12px;
+    font-weight: 800;
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.section-heading h3 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.section-date {
+    padding: 7px 10px;
+    border-radius: 10px;
+    background: rgba(17, 122, 93, 0.06);
+    color: #0c6d57;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.quick-links .btn {
+    min-width: 170px;
+    padding: 10px 16px;
+}
+
+.stat-grid {
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(226, 234, 230, 0.9);
+    border-top: 5px solid #1aa87b;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #ffffff 0%, #f4faf7 100%);
+    box-shadow: 0 18px 32px rgba(17, 29, 25, 0.06);
+    padding: 18px 18px 16px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.stat-card::before {
+    content: "";
+    position: absolute;
+    right: -30px;
+    top: -24px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(26, 168, 123, 0.14), transparent 70%);
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 22px 34px rgba(17, 29, 25, 0.10);
+}
+
+.stat-card h3 {
+    position: relative;
+    z-index: 1;
+    font-size: 30px;
+    color: #1a2d28;
+    margin: 0 0 7px;
+}
+
+.stat-card p {
+    position: relative;
+    z-index: 1;
+    color: #657a72;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.stat-card.stat-1 { border-top-color: #1aa87b; }
+.stat-card.stat-2 { border-top-color: #3f7fc4; }
+.stat-card.stat-3 { border-top-color: #86a23a; }
+.stat-card.stat-4 { border-top-color: #cc8b3a; }
+.stat-card.stat-5 { border-top-color: #7a63b5; }
+.stat-card.stat-spend { border-top-color: #0e7a5d; }
+
+.expense-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+}
+
+.expense-card {
+    background: linear-gradient(180deg, #fbfcfb 0%, #f1f7f5 100%);
+    border: 1px solid rgba(226, 234, 230, 0.9);
+    border-radius: 16px;
+    padding: 18px 16px;
+    box-shadow: 0 10px 18px rgba(17, 29, 25, 0.03);
+}
+
+.expense-card strong {
+    font-size: 27px;
+    color: #12362d;
+}
+
+.expense-label {
+    letter-spacing: 0.14em;
+    font-weight: 800;
+    color: #5d726b;
+}
+
+.table-wrap {
+    border-radius: 14px;
+    border: 1px solid rgba(226, 234, 230, 0.9);
+    overflow: hidden;
+}
+
+.table th {
+    background: linear-gradient(180deg, #f4faf7 0%, #edf4f1 100%);
+    color: #2e413d;
+    padding: 12px 14px;
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+}
+
+.table td {
+    padding: 13px 14px;
+    border-bottom: 1px solid rgba(226, 234, 230, 0.8);
+}
+
+.table tbody tr:hover td {
+    background: #f8fbfa;
+}
+
+@media (max-width: 720px) {
+    .page-title {
+        font-size: 24px;
+    }
+
+    .page-head {
+        padding: 14px 14px 12px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+.student-dashboard .app-main {
+    padding-top: 30px;
+}
+
+.student-dashboard .meal-showcase {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(220px, 320px) minmax(0, 1fr);
+    gap: 20px;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(12, 47, 36, 0.98), rgba(20, 80, 62, 0.94) 55%, rgba(30, 80, 55, 0.96));
+    border: 1px solid rgba(198, 166, 59, 0.42);
+    border-radius: 28px;
+    padding: 24px 24px 18px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    box-shadow: 0 24px 48px rgba(12, 47, 36, 0.18);
+}
+
+.student-dashboard .meal-showcase::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(246, 214, 122, 0.4), transparent 30%);
+    pointer-events: none;
+}
+
+.student-dashboard .meal-showcase-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.student-dashboard .showcase-plate {
+    position: relative;
+    width: min(100%, 270px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 35%, #fff8d7 0%, #f4d77d 30%, #d7ae39 70%, #b97f20 100%);
+    border: 14px solid rgba(255, 255, 255, 0.65);
+    box-shadow: inset 0 8px 18px rgba(90, 60, 0, 0.2), 0 22px 28px rgba(13, 61, 46, 0.2);
+    display: grid;
+    place-items: center;
+    animation: floatPlate 6s ease-in-out infinite;
+}
+
+.student-dashboard .showcase-plate::before,
+.student-dashboard .showcase-plate::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.student-dashboard .showcase-plate::before {
+    inset: 18px;
+    border: 2px dashed rgba(104, 70, 11, 0.28);
+}
+
+.student-dashboard .showcase-plate::after {
+    width: 50%;
+    height: 50%;
+    background: rgba(255, 255, 255, 0.14);
+    filter: blur(20px);
+}
+
+.student-dashboard .food-item {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 10px 16px rgba(28, 48, 40, 0.14);
+    font-size: clamp(2rem, 2vw, 2.7rem);
+    animation: floatFood 4s ease-in-out infinite;
+}
+
+.student-dashboard .food-item-1 { left: 18%; top: 18%; }
+.student-dashboard .food-item-2 { right: 16%; top: 18%; animation-delay: 0.8s; }
+.student-dashboard .food-item-3 { left: 22%; bottom: 16%; animation-delay: 1.5s; }
+.student-dashboard .food-item-4 { right: 18%; bottom: 15%; animation-delay: 0.5s; }
+
+.student-dashboard .meal-showcase-copy {
+    position: relative;
+    z-index: 1;
+}
+
+.student-dashboard .showcase-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: rgba(246, 214, 122, 0.18);
+    border: 1px solid rgba(246, 214, 122, 0.4);
+    color: #f6df9a;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.student-dashboard .meal-showcase-copy h2 {
+    margin: 14px 0 8px;
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.06em;
+    color: #f7f5ef;
+}
+
+.student-dashboard .meal-showcase-copy p {
+    margin: 0;
+    max-width: 540px;
+    color: rgba(252, 248, 240, 0.82);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.student-dashboard .meal-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.student-dashboard .meal-card {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(244, 249, 245, 0.98));
+    border: 1px solid rgba(198, 166, 59, 0.24);
+    border-radius: 24px;
+    padding: 20px 18px 18px;
+    box-shadow: 0 18px 34px rgba(17, 31, 25, 0.05);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.student-dashboard .meal-card::before {
+    content: "";
+    position: absolute;
+    inset: auto -12% -24% auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(19, 128, 96, 0.08);
+}
+
+.student-dashboard .meal-card:hover,
+.student-dashboard .meal-card.selected {
+    transform: translateY(-4px);
+    border-color: rgba(19, 128, 96, 0.4);
+    box-shadow: 0 22px 42px rgba(17, 31, 25, 0.10);
+}
+
+.student-dashboard .meal-card.selected {
+    background: linear-gradient(180deg, rgba(255, 246, 201, 0.7), rgba(248, 251, 246, 0.98));
+}
+
+.student-dashboard .meal-emoji {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    width: 62px;
+    height: 62px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(25, 136, 102, 0.18), rgba(246, 214, 122, 0.25));
+    border: 1px solid rgba(17, 122, 93, 0.12);
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.student-dashboard .meal-card h4 {
+    position: relative;
+    z-index: 1;
+    color: #12362d;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.student-dashboard .meal-card .meal-items,
+.student-dashboard .meal-card .meal-price,
+.student-dashboard .meal-card .meal-status,
+.student-dashboard .meal-card .note {
+    position: relative;
+    z-index: 1;
+}
+
+.student-dashboard .meal-card .meal-status {
+    font-weight: 700;
+    color: #49625f;
+}
+
+.student-dashboard .meal-card .btn {
+    width: 100%;
+    margin-top: 8px;
+    border-radius: 12px;
+    box-shadow: 0 12px 18px rgba(17, 122, 93, 0.16);
+}
+
+.student-dashboard .meal-card.selected .btn.btn-green {
+    background: linear-gradient(135deg, #1bb77d, #0e7a5d);
+}
+
+@keyframes floatPlate {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes floatFood {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(4deg); }
+}
+
+@media (max-width: 720px) {
+    .student-dashboard .meal-showcase {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .student-dashboard .meal-showcase-copy {
+        order: 2;
+    }
+
+    .student-dashboard .meal-showcase-visual {
+        order: 1;
+        min-height: 180px;
+    }
+}

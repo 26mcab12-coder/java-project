@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Records | Smart Food Mess Management</title>
+    <link rel="stylesheet" href="css/style.css?v=20261101.1">
+</head>
+<body class="app-body" data-page="admin-records">
+<header class="app-header"><div class="app-header-inner">
+    <a class="app-logo" href="admin-dashboard.html"><span class="app-logo-icon" aria-hidden="true">SM</span><span class="app-logo-text">Smart Food Mess</span></a>
+    <nav class="app-nav">
+        <a class="app-nav-link" href="admin-dashboard.html">Dashboard</a>
+        <a class="app-nav-link" href="admin-menu.html">Manage Menu</a>
+        <a class="app-nav-link" href="admin-students.html">Students</a>
+        <a class="app-nav-link active" href="admin-records.html">Meal Records</a>
+    </nav>
+    <div class="app-user"><details class="account-menu"><summary class="account-menu-trigger"><span class="role-badge">ADMIN</span><span class="user-chip" data-user-name></span><span class="avatar" data-user-initial></span><span class="account-menu-caret" aria-hidden="true"></span></summary><div class="account-menu-panel"><a href="account-settings.html">Settings</a><a href="logout">Logout</a></div></details></div>
+</div></header>
+<main class="app-main">
+    <div class="page-head"><div><h1 class="page-title">Meal Records</h1><p class="page-sub">Track who opted in, opted out or consumed their meals.</p></div></div>
+    <div class="flash-message" data-flash role="status" hidden></div>
+    <section class="section"><h3>All Meal Records</h3>
+        <div class="table-wrap"><table class="table">
+            <thead><tr><th>#</th><th>Student</th><th>Date</th><th>Meal</th><th>Status</th><th>Actions</th></tr></thead>
+            <tbody id="recordsTable"><tr><td colspan="6" class="empty-cell">Loading meal records…</td></tr></tbody>
+        </table></div>
+    </section>
+</main>
+<script src="js/pages.js?v=20261101.1"></script>
+</body>
+</html>

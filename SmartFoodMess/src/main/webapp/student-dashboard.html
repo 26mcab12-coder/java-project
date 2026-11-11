@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | Smart Food Mess Management</title>
+    <link rel="stylesheet" href="css/style.css?v=20261101.1">
+</head>
+<body class="app-body student-dashboard" data-page="student-dashboard">
+<header class="app-header"><div class="app-header-inner">
+    <a class="app-logo" href="student-dashboard.html"><span class="app-logo-icon" aria-hidden="true">SM</span><span class="app-logo-text">Smart Food Mess</span></a>
+    <nav class="app-nav"><a class="app-nav-link active" href="student-dashboard.html">Dashboard</a></nav>
+    <div class="app-user"><details class="account-menu"><summary class="account-menu-trigger"><span class="role-badge">STUDENT</span><span class="user-chip" data-user-name></span><span class="avatar" data-user-initial></span><span class="account-menu-caret" aria-hidden="true"></span></summary><div class="account-menu-panel"><a href="account-settings.html">Account &amp; Settings</a><a href="logout">Logout</a></div></details></div>
+</div></header>
+<main class="app-main">
+    <div class="page-head"><div><p class="eyebrow">STUDENT PORTAL</p><h1 class="page-title"><span data-time-greeting>Welcome</span>, <span data-user-name></span></h1><p class="page-sub" data-daily-welcome>Your meals and spending at a glance.</p></div><div class="today-pill"><span class="today-dot"></span><span data-today></span></div></div>
+    <div class="flash-message" data-flash role="status" hidden></div>
+    <div class="error-message" data-page-error role="alert" hidden></div>
+    <section class="meal-showcase" data-meal-showcase>
+        <div class="meal-showcase-visual" aria-hidden="true">
+            <div class="showcase-plate">
+                <span class="food-item food-item-1">🥞</span>
+                <span class="food-item food-item-2">🍳</span>
+                <span class="food-item food-item-3">🥭</span>
+                <span class="food-item food-item-4">🍛</span>
+            </div>
+        </div>
+        <div class="meal-showcase-copy">
+            <span class="showcase-badge" data-showcase-badge>Meal vibe</span>
+            <h2 data-showcase-heading>Breakfast Delight</h2>
+            <p data-showcase-text>Warm, fresh and perfectly matched to start your day well.</p>
+        </div>
+    </section>
+    <section class="section"><h3>Today's Meals</h3><div class="meal-card-grid" id="todayMeals"></div></section>
+    <section class="section">
+        <details class="collapsible">
+            <summary class="collapsible-summary"><h3>Weekly Menu</h3><span class="collapsible-arrow">▸</span></summary>
+            <div class="collapsible-content">
+                <div class="table-wrap"><table class="table">
+                    <thead><tr><th>Day</th><th>Breakfast</th><th>Lunch</th><th>Dinner</th></tr></thead>
+                    <tbody id="weeklyMenu"></tbody>
+                </table></div>
+            </div>
+        </details>
+    </section>
+    <section class="section"><h3>My Meal History</h3>
+        <div class="expense-summary">
+            <div class="expense-card expense-card-today"><span class="expense-label">TODAY'S SPEND</span><strong id="todayMealExpenseTotal">₹0.00</strong></div>
+            <div class="expense-card"><span class="expense-label">ALL-TIME SPEND</span><strong id="mealExpenseTotal">₹0.00</strong></div>
+        </div>
+        <div class="table-wrap"><table class="table">
+            <thead><tr><th>Date</th><th>Meal</th><th>Status</th><th>Expense</th></tr></thead>
+            <tbody id="mealHistory"></tbody>
+        </table></div>
+    </section>
+<script src="js/pages.js?v=20261101.1"></script>
+</body>
+</html>

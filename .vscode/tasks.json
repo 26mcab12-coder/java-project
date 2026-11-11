@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run SmartFoodMess with Jetty",
+			"type": "shell",
+			"command": "mvn",
+			"args": [
+				"-f",
+				"SmartFoodMess\\pom.xml",
+				"jetty:run"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}

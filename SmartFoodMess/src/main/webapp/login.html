@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Smart Food Mess Management</title>
+    <link rel="stylesheet" href="css/style.css?v=20261101.1">
+</head>
+<body class="auth-body">
+
+<div class="auth-wrap">
+    <div class="auth-card">
+
+        <div class="auth-brand">
+            <div class="auth-logo" aria-hidden="true">SM</div>
+            <h1 class="auth-title">Welcome Back</h1>
+            <p class="auth-subtitle">Sign in to continue to your mess portal.</p>
+        </div>
+
+        <div class="error-message" id="errorMessage" role="alert" hidden></div>
+        <div class="success-message" id="successMessage" role="status" hidden></div>
+
+        <form id="loginForm" action="login" method="post" novalidate>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-wrap">
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="you@example.com"
+                           autocomplete="email">
+                </div>
+                <small class="field-error" id="emailError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-wrap">
+                    <input type="password"
+                           id="password"
+                           name="password"
+                           placeholder="Enter your password"
+                           autocomplete="current-password">
+                </div>
+                <small class="field-error" id="passwordError"></small>
+            </div>
+
+            <button type="submit" class="btn-login">Sign In</button>
+        </form>
+
+        <p class="register-link">New student?
+            <a href="register">Create an account</a></p>
+    </div>
+</div>
+
+<script src="js/auth-messages.js"></script>
+<script src="js/validation.js"></script>
+</body>
+</html>
